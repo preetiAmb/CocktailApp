@@ -1,8 +1,7 @@
-import { useState, useEffect, createContext } from "react";
+import { useState, useEffect } from "react";
 
-export const CocktailsContext = createContext([]);
 
-const useFetchCocktails = () => {
+export const useFetchCocktails = () => {
   const [cocktails, setCocktails] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -50,13 +49,3 @@ const useFetchCocktails = () => {
 
   return { cocktails, loading, error, fetchCocktails };
 };
-
-export const CocktailProvider = ({ children }) => {
-  const cocktailsContextValue = useFetchCocktails();
-
-  return (
-    <CocktailsContext.Provider value={cocktailsContextValue}>
-      {children}
-    </CocktailsContext.Provider>
-  )
-}

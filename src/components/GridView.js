@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Grid } from "@mui/material";
-import { CocktailsContext } from "./useFetchCocktails";
+import { CocktailsContext } from "./CocktailsContext";
 
 const GridView = () => {
   const { cocktails } = useContext(CocktailsContext);

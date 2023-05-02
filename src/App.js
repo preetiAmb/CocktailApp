@@ -1,4 +1,4 @@
-import { CocktailProvider } from "./components/useFetchCocktails";
+import { CocktailsProvider } from "./components/CocktailsContext";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import CssBaseline from "@mui/material/CssBaseline";
 import Home from "./pages/Home";
@@ -14,7 +14,7 @@ const darkTheme = createTheme({
 function App() {
   return (
     <>
-      <CocktailProvider>
+      <CocktailsProvider>
         <ThemeProvider theme={darkTheme}>
           <CssBaseline />
           <Container>
@@ -23,7 +23,7 @@ function App() {
             </Box>
           </Container>
         </ThemeProvider>
-      </CocktailProvider>
+      </CocktailsProvider>
     </>
   );
 }

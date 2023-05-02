@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CocktailsContext } from "./useFetchCocktails";
+import { CocktailsContext } from "./CocktailsContext";
 import Card from "@mui/material/Card";
 import CardMedia from "@mui/material/CardMedia";
 import CardContent from "@mui/material/CardContent";
@@ -24,7 +24,18 @@ const CardView = () => {
               <Typography gutterBottom variant="h5" component="div">
                 {cocktail.name}
               </Typography>
-              <Typography variant="body1" color="text.secondary" style={{ lineHeight: "1.5em" }}>
+
+              <Typography gutterBottom component="h4">
+                {cocktail.glass}
+              </Typography>
+              <Typography gutterBottom variant="p" component="div">
+                {cocktail.info}
+              </Typography>
+              <Typography
+                variant="body1"
+                color="text.secondary"
+                style={{ lineHeight: "1.5em" }}
+              >
                 {cocktail.instructions}
               </Typography>
             </CardContent>

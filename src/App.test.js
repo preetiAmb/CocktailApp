@@ -1,8 +1,13 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+import { renderHook } from '@testing-library/react-hooks-next';
+import { useFetchCocktails } from "../src/components/useFetchCocktails";
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+
+describe('useFetchCocktails', () => {
+  test('should fetch data and return it', async () => {
+    const { result, waitForNextUpdate } = renderHook(() => useFetchCocktails());
+    expect(result.current.loading).toBe(true);
+    await waitForNextUpdate();
+    expect(result.current.loading).toBe(false);
+    expect(result.current.cocktails.length).toBeGreaterThan(0);
+  });
 });
