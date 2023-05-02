@@ -15,8 +15,6 @@ const useFetchCocktails = () => {
       const response = await fetch(url);
       const result = await response.json();
 
-      console.log(result)
-
       const { drinks } = result;
       if (!drinks) {
         setCocktails([]);
