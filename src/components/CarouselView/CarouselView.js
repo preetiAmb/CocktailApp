@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CocktailsContext } from "./CocktailsContext";
+import { CocktailsContext } from "../CocktailsContext";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,18 +17,18 @@ const CarouselView = () => {
 
   return (
     <Slider {...settings}>
-      {cocktails.map((cocktail) => (
-        <>
-          {" "}
-          <img
-            alt={cocktail.strDrink}
-            src={cocktail.image}
-            style={{ width: "100%", height: "auto", padding: "1rem" }}
-          />
-          <h3>{cocktail.name}</h3>
-        </>
-      ))}
-    </Slider>
+  {cocktails.map((cocktail) => (
+    <div key={cocktail.id}>
+      <img
+        alt={cocktail.name}
+        src={cocktail.image}
+        style={{ width: "100%", height: "auto", padding: "1rem" }}
+      />
+      <h3>{cocktail.name}</h3>
+    </div>
+  ))}
+</Slider>
+
   );
 };
 

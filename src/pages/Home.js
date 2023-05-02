@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import ViewSelector from "../components/ViewSelector";
-import GridView from "../components/GridView";
-import CarouselView from "../components/CarouselView";
-import CardView from "../components/CardView";
+import ViewSelector from "../components/ViewSelector/ViewSelector";
+import GridView from "../components/GridView/GridView";
+import CarouselView from "../components/CarouselView/CarouselView";
+import CardView from "../components/CardView/CardView";
 import { Toolbar, Typography } from "@mui/material";
 
 const Home = () => {

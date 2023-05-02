@@ -23,7 +23,7 @@ const ViewSelector = ({ onViewChange }) => {
       <Grid container spacing={1} justifyContent="end">
         <Grid item>
           <List>
-            <ListItem onClick={() => handleViewChange("card")}>
+            <ListItem data-testid="card-list-item" onClick={() => handleViewChange("card")}>
               <ListItemIcon>
                 <ViewModule />
               </ListItemIcon>
@@ -32,7 +32,7 @@ const ViewSelector = ({ onViewChange }) => {
         </Grid>
         <Grid item>
           <List>
-            <ListItem onClick={() => handleViewChange("grid")}>
+            <ListItem data-testid="grid-list-item" onClick={() => handleViewChange("grid")}>
               <ListItemIcon>
                 <GridOn />
               </ListItemIcon>
@@ -41,7 +41,7 @@ const ViewSelector = ({ onViewChange }) => {
         </Grid>
         <Grid item>
           <List>
-            <ListItem onClick={() => handleViewChange("carousel")}>
+            <ListItem data-testid="carousel-list-item" onClick={() => handleViewChange("carousel")}>
               <ListItemIcon>
                 <ViewCarousel />
               </ListItemIcon>
