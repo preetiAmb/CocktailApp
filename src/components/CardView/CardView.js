@@ -13,14 +13,17 @@ const CardView = () => {
     <Grid container spacing={3}>
       {cocktails.map((cocktail) => (
         <Grid item xs={12} sm={6} md={4} key={cocktail.id}>
-          <Card sx={{ maxWidth: 345 }}>
+          <Card sx={{ maxWidth: 345,height: "100%",
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "space-between", }}>
             <CardMedia
               component="img"
               height="auto"
               image={cocktail.image}
               alt={cocktail.name}
             />
-            <CardContent>
+            <CardContent sx={{ flexGrow: 1 }}>
               <Typography gutterBottom variant="h5" component="div">
                 {cocktail.name}
               </Typography>
