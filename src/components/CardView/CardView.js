@@ -32,10 +32,6 @@ const CardView = () => {
               <Typography gutterBottom variant="h5" component="div">
                 {cocktail.name}
               </Typography>
-
-              <Typography gutterBottom  component="h6">
-                {cocktail.glass}
-              </Typography>
               <Typography gutterBottom variant="subtitle1" component="div" style={{color:"grey"}}>
                 {cocktail.info}
               </Typography>
