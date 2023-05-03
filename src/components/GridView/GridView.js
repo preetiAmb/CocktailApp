@@ -19,7 +19,7 @@ const GridView = () => {
             height="auto"
             width="100%"
           />
-          <div>{cocktail.name}</div>
+          <div>{cocktail.name} <a style={{color:"grey"}}>({cocktail.info})</a></div>
         </Grid>
       ))}
     </Grid>
