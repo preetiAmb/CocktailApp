@@ -24,7 +24,7 @@ const CarouselView = () => {
         src={cocktail.image}
         style={{ width: "100%", height: "auto", padding: "1rem" }}
       />
-      <h3>{cocktail.name}</h3>
+      {/* <h3>{cocktail.name}</h3> */}
     </div>
   ))}
 </Slider>
